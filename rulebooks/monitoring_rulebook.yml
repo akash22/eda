@@ -1,0 +1,14 @@
+---
+- name: Monitor CPU Utilization
+  hosts: localhost
+  sources:
+    - ansible.eda.sources.monitoring:
+        type: cpu
+        threshold: 60
+
+  rules:
+    - name: Check CPU Usage
+      condition: event.utilization > 60
+      action:
+        run_playbook:
+          name: top_processes_playbook.yaml
