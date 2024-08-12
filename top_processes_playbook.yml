@@ -1,0 +1,11 @@
+---
+- name: Print top 5 CPU-consuming processes
+  hosts: localhost
+  tasks:
+    - name: Print top 5 CPU processes
+      shell: "ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6"
+      register: top_processes_output
+
+    - name: Display top 5 processes
+      debug:
+        msg: "{{ top_processes_output.stdout_lines }}"
