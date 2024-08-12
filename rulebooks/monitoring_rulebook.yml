@@ -11,4 +11,4 @@
       condition: event.utilization > 60
       action:
         run_playbook:
-          name: top_processes_playbook.yaml
+          name: top_processes_playbook.yml
