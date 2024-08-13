@@ -2,7 +2,7 @@
 - name: Monitor CPU Utilization
   hosts: 192.168.116.10
   sources:
-    - ansible.eda.sources.monitoring:
+    - ansible.eda.monitoring:
         type: cpu
         threshold: 60
 
