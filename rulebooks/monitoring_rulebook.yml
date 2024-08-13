@@ -2,7 +2,7 @@
 - name: Monitor CPU Utilization
   hosts: 192.168.116.10
   sources:
-    - eda.rulebooks.plugins.cpu_monitor.CpuMonitor:
+    - eda.ansible.plugins.cpu_monitor.CpuMonitor:
         threshold: 60
 
   rules:
