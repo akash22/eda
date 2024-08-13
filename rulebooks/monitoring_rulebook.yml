@@ -2,7 +2,7 @@
 - name: Monitor CPU Utilization
   hosts: 192.168.116.10
   sources:
-    - ansible_rulebook.plugins.sources.cpu_monitor.CpuMonitor:
+    - ansible_rulebook.plugins.cpu_monitor.CpuMonitor:
         threshold: 60
 
   rules:
