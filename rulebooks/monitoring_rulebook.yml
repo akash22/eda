@@ -10,5 +10,6 @@
     - name: Check CPU Usage
       condition: event.utilization > 60
       action:
-        run_playbook:
-          name: top_processes_playbook.yml
+        run_job_template:
+          name: monitoring_threshold
+          organization: Default
